@@ -68,7 +68,14 @@ const {buildErrorHandlerFile}= require('./builders/errorHandlingFileBuilder/inde
 buildErrorHandlerFile(blueprint)
 
 //run npm i inside of new folder and clean up package.json in cwd
-const{npmInstall}=require('./finalInstall/index.js')
-npmInstall(blueprint)
+// const{npmInstall}=require('./finalInstall/index.js')
+// npmInstall(blueprint)
+
+//create and connect to git repository
+if(blueprint.git.gitCreate){
+  const{gitSetup}=require('./finalInstall/gitSetup.js')
+  gitSetup(blueprint)
+}
+
 
 

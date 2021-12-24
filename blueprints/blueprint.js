@@ -83,6 +83,12 @@ const blueprint={
   "gitignore":[
     "node_modules",
     ".env"
-  ]
+  ],
+  "git":{
+    "gitCreate":true,
+    "gitRepoName":"RadBro",
+    "userName":"swimleftproducts"
 }
+  }
+  
 module.exports=blueprint
