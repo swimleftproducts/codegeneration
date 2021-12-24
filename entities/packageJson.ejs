@@ -1,0 +1,14 @@
+{
+  "name": "maincode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  <% dependencies.forEach((element,index,array) =>{%>"<%-element%>":"*"<%if (index!==array.length-1) { %>,<% } %>
+  <%})%>}
+}

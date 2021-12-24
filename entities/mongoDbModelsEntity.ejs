@@ -1,0 +1,28 @@
+const mongoose = require('mongoose')
+<% dbmodels.forEach(model => { -%>
+const <%-model-%>Schema = require('./<%-model-%>Schema')
+<%}) %>
+
+// get db string
+const {getDbConnectionString} = require('../config/dbConfig');
+
+mongoose.connect(getDbConnectionString(),
+{ useNewUrlParser: true,
+useUnifiedTopology: true}
+,(err) => {
+    if(err){console.log(err)}
+    else{
+        console.log('connected to DB')
+    }
+})
+
+<% dbmodels.forEach(model => { -%>
+<% let modelName=model[0].toUpperCase()+model.substring(1) -%>
+const <%-modelName-%> = mongoose.model('<%-modelName-%>',<%-model-%>Schema)
+<%}) %>
+
+module.exports={
+<% dbmodels.forEach(model => { -%>
+<% let modelName=model[0].toUpperCase()+model.substring(1) -%>
+<%-modelName-%>,
+<%}) %>}

@@ -1,0 +1,16 @@
+{
+  "folders":[
+    "controllers",
+    "helpers",
+    "middleware",
+    {
+      "models":["user","company"]
+    },
+    "public",
+    "config",
+    "routes",
+    "errorHandling",
+    ".env",
+    ".gitignore"
+  ]
+}

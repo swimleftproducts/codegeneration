@@ -1,0 +1,9 @@
+module.exports={
+  test(req,res,next){
+    res.send('hi there')
+    console.log('example route')
+  },<% routes.forEach(route => { %>
+  <%-route[2]%>(req,res,next){
+     res.send('<%-route[2]%>')
+  },<% }) %>
+}

@@ -1,0 +1,9 @@
+<%dependencies.forEach((element,index) =>{-%>
+<%-include(path.join(__dirname,`../../entities/require.ejs`),{name:names[index], package:element})-%> 
+<% }) -%>
+
+module.exports =(app)=>{
+<%middlewares.forEach(element =>{-%>
+  <%-include(path.join(__dirname,`../../entities/${element[0]}`))-%> 
+<%})-%>
+}

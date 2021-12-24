@@ -1,0 +1,6 @@
+ const <%-routeType%>Controller = require('../<%-controllerLocation%>/<%-routeType%>Controller')
+
+module.exports =(app)=>{
+  <% routes.forEach(route => { %>app.<%-route[0]%>('<%-route[1]%>',<%-routeType%>Controller.<%-route[2]%> ) 
+  <% }) %>
+}

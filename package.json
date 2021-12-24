@@ -1,0 +1,18 @@
+{
+  "name": "swimleft-codegenerator",
+  "version": "1.0.21",
+  "description": "",
+  "main": "express_servant.js",
+  "scripts": {
+    "create-app": "node express_servant.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "path": "^0.12.7"
+  },
+  "bin": {
+    "create-app": "express_servant.js"
+  }
+}
