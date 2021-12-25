@@ -2,6 +2,14 @@
 const blueprint={
   "name": "APP",
   "entryFileEntity": "rootEntity.ejs",
+  "hosting":{
+    "provider":"heroku",
+    "name":"testApp"
+  },
+  "frontend":{
+    "type":"React",
+    "location":"client"
+  },
   "routes":{
     "routeLocation": 'routes',
     "controllerLocation":'controllers',
@@ -78,7 +86,9 @@ const blueprint={
     "ejs",
     "express",
     "mongoose",
-    "cors"
+    "cors",
+    "concurrently",
+    "nodemon"
   ],
   "gitignore":[
     "node_modules",

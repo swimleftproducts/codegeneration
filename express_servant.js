@@ -67,15 +67,24 @@ addToGitIgnore(blueprint)
 const {buildErrorHandlerFile}= require('./builders/errorHandlingFileBuilder/index')
 buildErrorHandlerFile(blueprint)
 
-//run npm i inside of new folder and clean up package.json in cwd
-// const{npmInstall}=require('./finalInstall/index.js')
-// npmInstall(blueprint)
-
-//create and connect to git repository
-if(blueprint.git.gitCreate){
-  const{gitSetup}=require('./finalInstall/gitSetup.js')
-  gitSetup(blueprint)
+//create react app
+if(blueprint.frontend.type==="React"){
+  const{createReactApp}=require('./finalInstall/createReactApp')
+  createReactApp(blueprint)
 }
 
+//run npm i inside of new folder and clean up package.json in cwd
+const{npmInstall}=require('./finalInstall/index.js')
+npmInstall(blueprint)
 
+//create and connect to git repository
+// if(blueprint.git.gitCreate){
+//   const{gitSetup}=require('./finalInstall/gitSetup.js')
+//   gitSetup(blueprint)
+// }
 
+//create heroku project and push everything live
+if(blueprint.hosting.provider==="heroku"){
+   const{herokuConfig}=require('./finalInstall/herokuConfig')
+   herokuConfig(blueprint)
+}

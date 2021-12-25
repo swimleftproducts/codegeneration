@@ -24,7 +24,6 @@ module.exports.gitSetup =(blueprint)=>{
         console.log(`stderr: ${stderr}`);
         return;
     }
-    
   });
 
   console.log(`git setup done`);

@@ -1,12 +1,12 @@
 //general imports
 require('dotenv').config()
 const path = require('path')
-const ErrorHandler = require('./errorHandling/errorHandler')
+const {apiErrorHandler} = require('./errorHandling/errorHandler')
 
 //basic express setup
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4000
 
 //database connection
 //to be done
@@ -28,7 +28,7 @@ if(process.env.NODE_ENV === 'production'){
 })
 }
 
-app.use(ErrorHandler)
+app.use(apiErrorHandler)
 
 app.listen(port,() => {
   console.log('listening on PORT ',port )
