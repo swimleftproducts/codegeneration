@@ -87,7 +87,7 @@ if(blueprint.git.gitCreate){
 }
 
 //create heroku project and push everything live
-// if(blueprint.hosting.provider==="heroku"){
-//    const{herokuConfig}=require('./finalInstall/herokuConfig')
-//    herokuConfig(blueprint)
-// }
+if(blueprint.hosting.provider==="heroku"){
+   const{herokuConfig}=require('./finalInstall/herokuConfig')
+   herokuConfig(blueprint)
+}

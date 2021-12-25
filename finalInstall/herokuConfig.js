@@ -16,7 +16,7 @@ module.exports.herokuConfig =(blueprint) =>{
   const createNewProject = spawnSync(`heroku`,['create'],{cwd:`./${rootName}`});
   const deployProject = spawnSync(`git`,['push','heroku','main'],{cwd:`./${rootName}`});
 
-  const[projectHerokuGit,projectUrl]=createNewProject.stdout.toString('utf-8').split(' | ')
+  const[projectUrl,projectHerokuGit]=createNewProject.stdout.toString('utf-8').split(' | ')
   
   console.log(`project url at ${projectUrl}`)
   console.log(`project git at ${projectHerokuGit}`)
