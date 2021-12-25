@@ -6,7 +6,7 @@ const {apiErrorHandler} = require('./errorHandling/errorHandler')
 //basic express setup
 const express = require('express')
 const app = express()
-const port = 4000
+const port = process.env.PORT || 4000
 
 //database connection
 //to be done

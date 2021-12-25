@@ -18,6 +18,19 @@ module.exports.createReactApp =(blueprint) =>{
     }
   });
 
-  console.log(`React app created in ${rootName}/client`)
+  execSync(`cd ${blueprint.name}/client && rm -rf .git`, (error, stdout, stderr) => {
+    if (error) {
+      console.log(`error: ${error.message}`);
+      return;
+  }
+  if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return;
+  }
+});
+
+  console.log(`React app created in ${rootName}/client \n
+  .git file removed in client 
+  `)
 
 }

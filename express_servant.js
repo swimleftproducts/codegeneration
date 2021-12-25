@@ -73,18 +73,21 @@ if(blueprint.frontend.type==="React"){
   createReactApp(blueprint)
 }
 
+
 //run npm i inside of new folder and clean up package.json in cwd
 const{npmInstall}=require('./finalInstall/index.js')
 npmInstall(blueprint)
 
+
+
 //create and connect to git repository
-// if(blueprint.git.gitCreate){
-//   const{gitSetup}=require('./finalInstall/gitSetup.js')
-//   gitSetup(blueprint)
-// }
+if(blueprint.git.gitCreate){
+   const{gitSetup}=require('./finalInstall/gitSetup.js')
+  gitSetup(blueprint)
+}
 
 //create heroku project and push everything live
-if(blueprint.hosting.provider==="heroku"){
-   const{herokuConfig}=require('./finalInstall/herokuConfig')
-   herokuConfig(blueprint)
-}
+// if(blueprint.hosting.provider==="heroku"){
+//    const{herokuConfig}=require('./finalInstall/herokuConfig')
+//    herokuConfig(blueprint)
+// }

@@ -96,7 +96,7 @@ const blueprint={
   ],
   "git":{
     "gitCreate":true,
-    "gitRepoName":"RadBro",
+    "gitRepoName":"Firstworking",
     "userName":"swimleftproducts"
 }
   }

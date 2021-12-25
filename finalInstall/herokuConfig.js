@@ -13,7 +13,8 @@ module.exports.herokuConfig =(blueprint) =>{
   });
   //create new project and pull names
   const git = spawnSync(`git`,['init'],{cwd:`./${rootName}`});
-  const createNewProject = spawnSync(`heroku`,['create',`${herokuName}`],{cwd:`./${rootName}`});
+  const createNewProject = spawnSync(`heroku`,['create'],{cwd:`./${rootName}`});
+  const deployProject = spawnSync(`git`,['push','heroku','main'],{cwd:`./${rootName}`});
 
   const[projectHerokuGit,projectUrl]=createNewProject.stdout.toString('utf-8').split(' | ')
   
