@@ -91,3 +91,14 @@ if(blueprint.hosting.provider==="heroku"){
    const{herokuConfig}=require('./finalInstall/herokuConfig')
    herokuConfig(blueprint)
 }
+
+
+/*
+Learn to
+-write .js code in node
+-use template language in node
+-read and save files in node
+-use command line from node.js node
+-create git repository from command line
+-create heroku project from command line
+*/

@@ -1,6 +1,6 @@
 {
   "name": "swimleft-codegenerator",
-  "version": "1.0.21",
+  "version": "1.1.02",
   "description": "",
   "main": "express_servant.js",
   "scripts": {

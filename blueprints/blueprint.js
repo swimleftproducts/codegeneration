@@ -1,10 +1,10 @@
 
 const blueprint={
-  "name": "APP",
+  "name": "App",
   "entryFileEntity": "rootEntity.ejs",
   "hosting":{
     "provider":"heroku",
-    "name":"testApp"
+    "name":"testapp-swimleftproducts"
   },
   "frontend":{
     "type":"React",
@@ -96,7 +96,7 @@ const blueprint={
   ],
   "git":{
     "gitCreate":true,
-    "gitRepoName":"Firstworking",
+    "gitRepoName":"JustMade",
     "userName":"swimleftproducts"
 }
   }
