@@ -5,8 +5,8 @@ const path = require('path')
 
 
 //delete app if it exists already, risky?? very!
-const {cleanup} = require('./dev_cleanup')
-cleanup()
+//const {cleanup} = require('./dev_cleanup')
+//cleanup()
 
 // import default blueprint file or use your own
 // if user supplies a name of a blueprint in the cwd then 
